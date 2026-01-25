@@ -1,3 +1,10 @@
+# [5.18.0](https://github.com/MCP-UI-Org/mcp-ui/compare/client/v5.17.3...client/v5.18.0) (2026-01-25)
+
+
+### Features
+
+* React renderer for MCP Apps ([#147](https://github.com/MCP-UI-Org/mcp-ui/issues/147)) ([fbc918d](https://github.com/MCP-UI-Org/mcp-ui/commit/fbc918d713861396703ede124c5676cf3d1164dd))
+
 ## [5.17.3](https://github.com/MCP-UI-Org/mcp-ui/compare/client/v5.17.2...client/v5.17.3) (2025-12-20)
 
 
