@@ -1,3 +1,20 @@
+# [6.0.0](https://github.com/MCP-UI-Org/mcp-ui/compare/client/v5.18.0...client/v6.0.0) (2026-01-26)
+
+
+### Bug Fixes
+
+* trigger MCP Apps client release ([#173](https://github.com/MCP-UI-Org/mcp-ui/issues/173)) ([b0c0659](https://github.com/MCP-UI-Org/mcp-ui/commit/b0c0659700b493a0083d0de12958f276e4c37715))
+
+
+### Features
+
+* mcp-ui -> mcp apps! ([#172](https://github.com/MCP-UI-Org/mcp-ui/issues/172)) ([93a6e22](https://github.com/MCP-UI-Org/mcp-ui/commit/93a6e225808894cac3206504cf15c481f88ed540))
+
+
+### BREAKING CHANGES
+
+* removed discarded content types, changed mimetype, updated docs, etc.
+
 # [5.18.0](https://github.com/MCP-UI-Org/mcp-ui/compare/client/v5.17.3...client/v5.18.0) (2026-01-25)
 
 
