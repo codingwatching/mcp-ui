@@ -1,3 +1,15 @@
+# [6.0.0](https://github.com/MCP-UI-Org/mcp-ui/compare/server/v5.17.0...server/v6.0.0) (2026-01-26)
+
+
+### Features
+
+* mcp-ui -> mcp apps! ([#172](https://github.com/MCP-UI-Org/mcp-ui/issues/172)) ([93a6e22](https://github.com/MCP-UI-Org/mcp-ui/commit/93a6e225808894cac3206504cf15c481f88ed540))
+
+
+### BREAKING CHANGES
+
+* removed discarded content types, changed mimetype, updated docs, etc.
+
 # [5.17.0](https://github.com/MCP-UI-Org/mcp-ui/compare/server/v5.16.3...server/v5.17.0) (2026-01-25)
 
 
