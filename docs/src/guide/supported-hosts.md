@@ -8,7 +8,8 @@ These hosts implement the [MCP Apps SEP protocol](https://github.com/modelcontex
 
 | Host | Support | Notes |
 | :--- | :-------: | :---- |
-| [VSCode](https://github.com/microsoft/vscode/issues/260218) | ✅ | Internals (as of January) |
+| [Claude](https://www.claude.ai/) | ✅ | ✅ |
+| [VSCode](https://github.com/microsoft/vscode/issues/260218) | ✅ | |
 | [Postman](https://www.postman.com/) | ✅ | |
 | [Goose](https://block.github.io/goose/) | ✅ | |
 | [MCPJam](https://www.mcpjam.com/) | ✅ | |
