@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/MCP-UI-Org/mcp-ui/compare/server/v6.0.0...server/v6.0.1) (2026-02-06)
+
+
+### Bug Fixes
+
+* trigger MCP Apps client release ([#173](https://github.com/MCP-UI-Org/mcp-ui/issues/173)) ([b0c0659](https://github.com/MCP-UI-Org/mcp-ui/commit/b0c0659700b493a0083d0de12958f276e4c37715))
+
 # [6.0.0](https://github.com/MCP-UI-Org/mcp-ui/compare/server/v5.17.0...server/v6.0.0) (2026-01-26)
 
 
