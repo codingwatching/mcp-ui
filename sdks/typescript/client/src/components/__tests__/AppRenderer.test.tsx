@@ -6,6 +6,7 @@ import type { Client } from '@modelcontextprotocol/sdk/client/index.js';
 
 import { AppRenderer, type AppRendererProps, type AppRendererHandle } from '../AppRenderer';
 import type { AppFrameProps } from '../AppFrame';
+import type { AppBridge } from '@modelcontextprotocol/ext-apps/app-bridge';
 import * as appHostUtils from '../../utils/app-host-utils';
 
 // Mock AppFrame to capture props
@@ -14,9 +15,15 @@ vi.mock('../AppFrame', () => ({
   AppFrame: (props: AppFrameProps) => {
     mockAppFrame(props);
     return (
-      <div data-testid="app-frame" data-html={props.html} data-sandbox-url={props.sandbox?.url?.href}>
+      <div
+        data-testid="app-frame"
+        data-html={props.html}
+        data-sandbox-url={props.sandbox?.url?.href}
+      >
         {props.toolInput && <span data-testid="tool-input">{JSON.stringify(props.toolInput)}</span>}
-        {props.toolResult && <span data-testid="tool-result">{JSON.stringify(props.toolResult)}</span>}
+        {props.toolResult && (
+          <span data-testid="tool-result">{JSON.stringify(props.toolResult)}</span>
+        )}
       </div>
     );
   },
@@ -29,7 +36,7 @@ vi.mock('../../utils/app-host-utils', () => ({
 }));
 
 // Store mock bridge instance for test access
-let mockBridgeInstance: Partial<import('@modelcontextprotocol/ext-apps/app-bridge').AppBridge> | null = null;
+let mockBridgeInstance: Partial<AppBridge> | null = null;
 
 // Mock AppBridge constructor
 vi.mock('@modelcontextprotocol/ext-apps/app-bridge', () => {
@@ -200,7 +207,6 @@ describe('<AppRenderer />', () => {
       });
     });
 
-
     it('should display error when tool has no UI resource', async () => {
       vi.mocked(appHostUtils.getToolUiResourceUri).mockResolvedValue(null);
 
@@ -247,7 +253,9 @@ describe('<AppRenderer />', () => {
     });
 
     it('should update hostContext when prop changes', async () => {
-      const { rerender } = render(<AppRenderer {...defaultProps} hostContext={{ theme: 'light' as const }} />);
+      const { rerender } = render(
+        <AppRenderer {...defaultProps} hostContext={{ theme: 'light' as const }} />,
+      );
 
       await waitFor(() => {
         expect(mockBridgeInstance?.setHostContext).toHaveBeenCalledWith({ theme: 'light' });
@@ -528,10 +536,7 @@ describe('<AppRenderer />', () => {
       render(<AppRenderer {...props} />);
 
       await waitFor(() => {
-        expect(mockReadResource).toHaveBeenCalledWith(
-          { uri: 'ui://test/tool' },
-          expect.anything(),
-        );
+        expect(mockReadResource).toHaveBeenCalledWith({ uri: 'ui://test/tool' }, expect.anything());
         expect(screen.getByTestId('app-frame')).toBeInTheDocument();
         expect(screen.getByTestId('app-frame')).toHaveAttribute(
           'data-html',
