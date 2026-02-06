@@ -17,9 +17,6 @@ hero:
       text: GitHub
       link: https://github.com/idosal/mcp-ui
     - theme: alt
-      text: Live Demo
-      link: https://scira-mcp-chat-git-main-idosals-projects.vercel.app/
-    - theme: alt
       text: About
       link: /about
 

@@ -66,10 +66,6 @@ export default withMermaid(
           text: 'Examples',
           items: [
             {
-              text: 'Live Demo',
-              link: 'https://scira-mcp-chat-git-main-idosals-projects.vercel.app/',
-            },
-            {
               text: 'UI Inspector',
               link: 'https://github.com/idosal/ui-inspector',
             },
